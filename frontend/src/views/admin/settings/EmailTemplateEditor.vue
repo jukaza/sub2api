@@ -538,6 +538,9 @@ function formatLocale(locale: string): string {
   if (lower === "zh" || lower.startsWith("zh-")) {
     return t("admin.settings.emailTemplates.localeZh");
   }
+  if (lower === "vi" || lower.startsWith("vi-")) {
+    return t("admin.settings.emailTemplates.localeVi");
+  }
   if (lower === "en" || lower.startsWith("en-")) {
     return t("admin.settings.emailTemplates.localeEn");
   }

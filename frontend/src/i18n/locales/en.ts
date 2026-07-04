@@ -6380,6 +6380,7 @@ export default {
         event: 'Event',
         locale: 'Locale',
         localeEn: 'English',
+        localeVi: 'Vietnamese',
         localeZh: 'Chinese',
         subject: 'Subject',
         subjectPlaceholder: 'Enter the email subject',

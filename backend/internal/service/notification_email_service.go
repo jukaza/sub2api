@@ -42,6 +42,7 @@ const (
 	notificationEmailUnsubscribeSecretKey = "notification_email_unsubscribe_secret"
 	notificationEmailDefaultLocale        = "en"
 	notificationEmailLocaleChinese        = "zh"
+	notificationEmailLocaleVietnamese     = "vi"
 	notificationEmailMaxSubjectLength     = 200
 	notificationEmailMaxHTMLLength        = 30000
 	notificationEmailUnsubscribeTTL       = 365 * 24 * time.Hour
@@ -749,6 +750,9 @@ func normalizeNotificationLocale(raw string) string {
 		tag := strings.TrimSpace(strings.Split(part, ";")[0])
 		if strings.HasPrefix(tag, "zh") || tag == "cn" {
 			return notificationEmailLocaleChinese
+		}
+		if strings.HasPrefix(tag, "vi") {
+			return notificationEmailLocaleVietnamese
 		}
 		if strings.HasPrefix(tag, "en") {
 			return notificationEmailDefaultLocale
